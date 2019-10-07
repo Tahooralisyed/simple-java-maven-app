@@ -31,7 +31,24 @@
               <mainClass>com.mycompany.app.App</mainClass>
             </manifest>
           </archive>
+           <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
+	       	<dataFile>{$basedir}//target/coverage-reports/jacoco-unit.exec</dataFile>
         </configuration>
+        <executions>
+	<execution>
+ 		<id>jacoco-intialize</id>
+		<goals>
+			<goal>prepare-agent</goal>
+		</goals>
+      </execution>
+      <execution>
+        <id>jacoco-site</id>
+        <phase>package</phase>
+        <goals>
+          <goal>report</goal>
+        </goals> 
+      </execution>      
+      </executions>
       </plugin>
     </plugins>
   </build>
