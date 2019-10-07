@@ -37,9 +37,7 @@
         <executions>
 	<execution>
  		<id>jacoco-intialize</id>
-		<goals>
-			<goal>prepare-agent</goal>
-		</goals>
+		
       </execution>
       <execution>
         <id>jacoco-site</id>
